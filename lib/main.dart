@@ -1,5 +1,8 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,41 +13,35 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.tealAccent,
+        backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child:Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Container(
-                height: double.infinity,
-                width: 100.0,
-                color: Colors.white,
-                child: Text('Container 1'),
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('images/diamond_profile_pic.png'),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                    height: 100.0,
-                    width: 100.0,
-                    color: Colors.blue,
-                    child: Text('Container 2'),
-                  ),Container(
-                    height: 100.0,
-                    width: 100.0,
-                    color: Colors.blue[200],
-                    child: Text('Container 2'),
-                  ),
-                ]
+              Text(
+                'Sterk',
+                style: TextStyle(
+                  fontSize: 40.0,
+                  color: Colors.white,
+                  fontFamily: 'Pacifico'
+                ),
               ),
-              Container(
-                height: double.infinity,
-                width: 100.0,
-                color: Colors.redAccent,
-                child: Text('Container 2'),
-              ),
+              Text(
+                'Product Owner',
+                style: TextStyle(
+                    fontSize: 20.0,
+                    color: Colors.teal[100],
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 2.5,
+                    fontFamily: 'SourceSansPro'
+                ),
+              )
             ],
-          ),
+          )
         ),
       ),
     );
