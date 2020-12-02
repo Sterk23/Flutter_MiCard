@@ -1,5 +1,6 @@
 ![App Brewery Banner](https://github.com/londonappbrewery/Images/blob/master/AppBreweryBanner.png)
-
+![ScreenShot](https://github.com/Sterk23/Flutter_MiCard/screenshot.png)
+# This repo is a part of flutter course on udemy
 # Mi Card
 
 ## Our Goal
